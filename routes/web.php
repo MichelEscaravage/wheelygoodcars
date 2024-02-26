@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Car;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +21,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     //
 });
+
+Route::get('/cars', [Car::class, 'index'])->name('cars.index');
 
 require __DIR__.'/auth.php';

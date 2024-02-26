@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('car_tag', function (Blueprint $table) {
+        Schema::create('car_tags', function (Blueprint $table) {
             $table->foreignId('tag_id');
             $table->foreignId('car_id');
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('car_tag');
+        Schema::dropIfExists('car_tags');
     }
 };
