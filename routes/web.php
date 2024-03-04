@@ -2,6 +2,7 @@
 
 use App\Models\Car;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Route::middleware('auth')->group(function () {
     //
 });
 
-Route::get('/cars', [Car::class, 'index'])->name('cars.index');
+Route::get('/cars', [Controller::class, 'index'])->name('cars.index');
+Route::get('/cars/create', [Controller::class, 'create'])->name('cars.create');
 
 require __DIR__.'/auth.php';

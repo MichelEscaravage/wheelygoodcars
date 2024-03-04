@@ -13,12 +13,13 @@ class Controller extends BaseController
 
     public function index()
     {
-        $cars = Car::all()->sortBy('name');
-        return view('cars.index')
-            ->with('cars', $cars);
-        
+        $cars = Car::orderBy('make')->get();
+        return view('cars.index')->with('cars', $cars);
     }
 
-
+    public function create()
+    {
+        return view('cars.create');
+    }
+        
 }
-

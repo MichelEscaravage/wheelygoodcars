@@ -20,3 +20,91 @@ $font-family-sans-serif: 'Open Sans', sans-serif;
     justify-content: center;
     align-items: center;
 }
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: hsl(0, 0%, 0%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.car {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid hsl(28, 100%, 45%);
+    background-color: hsl(30, 23%, 95%);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.car p {
+    margin: 5px 0;
+}
+
+.make {
+    font-weight: bold;
+    font-size: 28px;
+    color: hsl(28, 10%, 14%);
+    grid-column: span 3;
+}
+
+.license {
+    background: #f0b504 none repeat scroll 0 0;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    grid-column: span 4;
+    position: relative; /* Nodig voor het plaatsen van het ::before element */
+}
+
+.license::before {
+    content: "NL";
+    background-color: #2b4c9c;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: -0px; /* Aanpassen om de positie te verplaatsen */
+    left: -1px; /* Aanpassen om de positie te verplaatsen */
+}
+
+
+.price {
+    color: hsl(0, 0%, 0%);
+    font-size: 16px;
+    grid-column: span 3; /* Pas grid-column aan voor price */
+}
+
+.price::before {
+    content: "€ ";
+}
+
+.mileage {
+    color: hsl(0, 0%, 0%);
+    font-size: 16px;
+    grid-column: span 3; /* Pas grid-column aan voor mileage */
+}
+
+.mileage::after {
+    content: " Km";
+}
+
+.form-group 
+{
+    display: flex;
+    flex-flow: column;
+}
+
+.form-group-H
+{
+    display: flex;
+    flex-flow: column;
+}
+
+

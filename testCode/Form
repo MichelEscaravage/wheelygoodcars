@@ -1,0 +1,24 @@
+{{-- resources/views/multistep_form.blade.php --}}
+<form id="multiStepForm" action="{{ route('form.submit') }}" method="POST">
+    @csrf
+
+    <!-- Step 1 -->
+    <div id="step1">
+        <!-- Step 1 form fields here -->
+        <button type="button" onclick="showStep(2)">Next</button>
+    </div>
+
+    <!-- Step 2, initially hidden -->
+    <div id="step2" style="display: none;">
+        <!-- Step 2 form fields here -->
+        <button type="button" onclick="showStep(1)">Back</button>
+        <button type="button" onclick="showStep(3)">Next</button>
+    </div>
+
+    <!-- Final Step, initially hidden -->
+    <div id="step3" style="display: none;">
+        <!-- Final step form fields here -->
+        <button type="button" onclick="showStep(2)">Back</button>
+        <input type="submit" value="Submit">
+    </div>
+</form>
