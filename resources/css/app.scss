@@ -74,6 +74,85 @@ $font-family-sans-serif: 'Open Sans', sans-serif;
     left: -1px; /* Aanpassen om de positie te verplaatsen */
 }
 
+.licenseinput {
+    place-items: center;
+    background: #f0b504 none repeat scroll 0 0;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    grid-column: span 4;
+    position: relative; /* Nodig voor het plaatsen van het ::before element */
+}
+
+.licenseNl {
+    content: "NL";
+    background-color: #2b4c9c;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 1;
+}
+
+.gobutton {
+    margin-left: 10%;
+    background-color: hsl(28, 100%, 50%); 
+    padding: 0% 5%;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+  }
+  
+  .gobutton:hover {
+    background-color: #45a049; /* Donkerder groene kleur bij hover */
+  }
+
+.flex{
+    display: flex;
+}
+
+.phase-1 {
+    place-items: center;
+    border: 2px solid hsl(28, 100%, 45%);
+    background-color: hsl(30, 23%, 95%);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 1% auto; 
+    max-width: 70%;
+  }
+
+  .text{
+    font-weight: bold;
+  }
+
+.form-group {
+    border: 2px solid hsl(28, 100%, 45%);
+    background-color: hsl(30, 23%, 95%);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .frame {
+    margin-top: 1%;
+    border: 2px solid #000;
+    background-color: black;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
 
 .price {
     color: hsl(0, 0%, 0%);
